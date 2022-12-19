@@ -56,10 +56,7 @@ public class AVLTree implements AVLTreeInterface {
 
     public void insert(int value){
       root = insert(root, value);
-//      System.out.println();
-//      System.out.println("Insert Value " + value);
-//      System.out.println(root);
-//        System.out.println();
+
     }
 
     private AVLNode insert(AVLNode root, int value){
@@ -185,6 +182,4 @@ public class AVLTree implements AVLTreeInterface {
         }
 
     }
-
-
 }

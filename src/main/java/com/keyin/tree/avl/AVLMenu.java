@@ -10,7 +10,7 @@ public class AVLMenu {
 
         do{
             System.out.println("Select a Option");
-            System.out.println("1.Insert a Value");
+            System.out.println("1.Insert a Number");
             System.out.println("2.Check if Tree is Empty");
             System.out.println("3.Empty Tree");
             System.out.println("4.Display AVL Tree in Post Order");
@@ -21,7 +21,7 @@ public class AVLMenu {
             int selection = scanner.nextInt();
             switch (selection){
                 case 1 :
-                    System.out.println("Enter an value to insert in AVL Tree enter(-1) to quit");
+                    System.out.println("Enter a number to insert in AVL Tree. Enter(-1) to quit");
                     while( selection != -1){
                          selection = scanner.nextInt();
                          if(selection != -1){
@@ -42,7 +42,7 @@ public class AVLMenu {
                     break;
 
                 case 4 :
-                    System.out.println("Display Post Order");
+                    System.out.println("Display in Post Order");
                     tree.postOrderTraversal();
                     break;
                 case 5 :
@@ -50,7 +50,7 @@ public class AVLMenu {
                     tree.inOrderTraversal();
                     break;
                 case 6 :
-                    System.out.println("Display Pre Order");
+                    System.out.println("Display in Pre Order");
                     tree.preOrderTraversal();
                     break;
 
