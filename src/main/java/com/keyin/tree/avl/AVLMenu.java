@@ -10,14 +10,14 @@ public class AVLMenu {
 
         do{
             System.out.println("Select a Option");
-            System.out.println("1.Insert a Number");
+            System.out.println("1.Insert a Number into the Tree");
             System.out.println("2.Check if Tree is Empty");
-            System.out.println("3.Empty Tree");
-            System.out.println("4.Display AVL Tree in Post Order");
-            System.out.println("5.Display AVl Tree in Order");
-            System.out.println("6.Display AVL tree in Pre Order");
+            System.out.println("3.Empty Tree (Clear All Values)");
+            System.out.println("4.Display the AVL Tree in Post Order");
+            System.out.println("5.Display the AVl Tree in Order");
+            System.out.println("6.Display the AVL tree in Pre Order");
             System.out.println();
-            System.out.println("Enter Choice");
+            System.out.println("Enter Your Choice");
             int selection = scanner.nextInt();
             switch (selection){
                 case 1 :
