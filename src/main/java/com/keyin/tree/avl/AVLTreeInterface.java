@@ -15,6 +15,9 @@ public interface AVLTreeInterface {
     void postOrderTraversal();
 
     void preOrderTraversal();
+    void setRoot(AVLTree.AVLNode root);
+
+    AVLTree.AVLNode getRoot();
 
     List<Integer> getTree();
 

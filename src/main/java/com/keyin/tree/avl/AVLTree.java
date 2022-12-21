@@ -1,10 +1,15 @@
 package com.keyin.tree.avl;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY )
 public class AVLTree implements AVLTreeInterface {
-
+    @JsonIgnore
     private List<Integer> tree = new ArrayList<>();
 
 
@@ -13,14 +18,17 @@ public class AVLTree implements AVLTreeInterface {
     }
 
     // AVL Node Class
-    private class AVLNode{
+
+    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY )
+    public static class AVLNode{
         private int height;
         private int value;
         private AVLNode leftChild;
         private AVLNode rightChild;
 
 
-
+        public AVLNode() {
+        }
         public AVLNode(int value) {
             this.value = value;
 
@@ -34,7 +42,24 @@ public class AVLTree implements AVLTreeInterface {
 
     private AVLNode root;
 
+    public AVLTree() {
+    }
 
+    @JsonCreator
+    public AVLTree(@JsonProperty("root") AVLNode root) {
+        this.root = root;
+    }
+
+
+    @Override
+    public void setRoot(AVLNode root) {
+        this.root = root;
+    }
+
+    @Override
+    public AVLNode getRoot() {
+        return this.root;
+    }
     public String clearTree(){
         root = null;
         tree.clear();
